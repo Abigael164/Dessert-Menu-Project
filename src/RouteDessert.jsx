@@ -5,7 +5,7 @@ import DessertDetails from './paths/DessertDetails';
 import About from './paths/About';
 import NavDessert from './components/NavDessert';
 import NotFound from './paths/NotFound';
-import "./index.css";
+import "./RouteDessert.css";
 
 const RoutedDessert = () => {
     const location = useLocation();
