@@ -1,28 +1,35 @@
 import { NavLink } from "react-router-dom";
+import { FaBars,FaTimes } from "react-icons/fa";
+import { useState } from "react";
 const NavDessert = () =>{
+    const[isOpen,setIsOpen] = useState(false)
+    const toggleMenu = () =>{
+        setIsOpen(!isOpen)
+    }
     return(
         <nav className="navbar">
-            <ul>
-                <li>
-                    <NavLink style=
-                    {{fontSize:"20px",fontStyle:"oblique",fontWeight:"bold"
-                    }}>
+            <div className="logo">
+                <NavLink to="/">
                         Bite Cravings
                     </NavLink>
-                </li>
+            </div>
+            <div className="bars" onClick={toggleMenu}>
+                {isOpen? <FaTimes/>:<FaBars/>}
+            </div>
+            <ul className={isOpen?"nav-links open": "nav-links"}>
                 <li>
-                    <NavLink to="/" 
+                    <NavLink to="/" onClick={toggleMenu}
                     className={({isActive}) => (isActive? "active": "")}>
                         Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/menu" 
+                    <NavLink to="/menu" onClick={toggleMenu}
                     className={({isActive}) => (isActive? "active": "")}>
                         Menu</NavLink>
                 </li>
             
                 <li>
-                    <NavLink to="/about" 
+                    <NavLink to="/about"onClick={toggleMenu}
                     className={({isActive}) => (isActive? "active": "")}>
                         About</NavLink>
                 </li>

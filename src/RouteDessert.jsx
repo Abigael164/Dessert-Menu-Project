@@ -11,6 +11,7 @@ const RoutedDessert = () => {
 
     return (
         <div className="container">
+        <div className="respond">
             {location.pathname !== "/404" && <NavDessert />}
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -20,6 +21,7 @@ const RoutedDessert = () => {
                 <Route path="/404" element={<NotFound />} />
                 <Route path="*" element={<Navigate to="/404" replace />} />
             </Routes>
+        </div>
         </div>
     );
 }
