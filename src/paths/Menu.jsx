@@ -21,8 +21,8 @@ const Menu = () =>{
     }
         if(loading){
             return<h3 
-            style={{backgroundColor:"white",position:"relative",zIndex:"99999",display:"flex",
-                minHeight:"100vh",justifyContent:"center",fontSize:"30px"
+            style={{backgroundColor:"white",position:"relative",zIndex:"9999999999",display:"flex",
+                minHeight:"100vh",justifyContent:"center",fontSize:"30px",color:"black"
             }}>Loading...</h3>
         }
         
